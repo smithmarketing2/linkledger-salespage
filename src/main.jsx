@@ -1,6 +1,6 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client'
-import { ArrowRight, BarChart3, CheckCircle2, Download, Link2, MousePointerClick, WalletCards } from 'lucide-react'
+import { ArrowRight, BarChart3, CheckCircle2, Download, Gift, Link2, MousePointerClick, WalletCards } from 'lucide-react'
 import './styles.css'
 
 const features = [
@@ -44,6 +44,24 @@ const steps = [
   'Review your dashboard to see top links, top programs, clicks, commissions, and activity.'
 ]
 
+const bonuses = [
+  {
+    icon: Gift,
+    name: 'Top 50 Affiliate Programs Worth Tracking',
+    description: 'A curated list of 50 high-converting affiliate programs with commission rates, cookie windows, and network details — ready to add to your dashboard on day one.'
+  },
+  {
+    icon: CheckCircle2,
+    name: 'LinkLedger Quick-Start Setup Checklist',
+    description: 'A step-by-step checklist that walks you from account setup to first tracked link in under 15 minutes.'
+  },
+  {
+    icon: Download,
+    name: 'Affiliate Link Audit Worksheet',
+    description: 'A simple worksheet to review your existing links, spot what is underperforming, and decide what to migrate into LinkLedger first.'
+  }
+]
+
 const faqs = [
   ['Who is LinkLedger for?', 'Affiliate marketers, content creators, and niche site owners who want one place to manage links, track clicks, and log commissions.'],
   ['Do I need to connect every affiliate program?', 'No. For V1, manually add programs, create trackable links, and log commissions without complex integrations.'],
@@ -63,6 +81,7 @@ function App() {
         <nav>
           <a href="#features">Features</a>
           <a href="#pricing">Pricing</a>
+          <a href="#bonuses">Bonuses</a>
           <a href="#faq">FAQ</a>
         </nav>
         <a className="button small" href="#pricing">Start Free Trial</a>
@@ -170,6 +189,22 @@ function App() {
             <a className="button full" href="mailto:hello@linkledger.app?subject=Start%20LinkLedger%20Pro">Start Free Trial</a>
           </article>
         </div>
+      </section>
+
+      <section id="bonuses" className="bonuses sectionWrap">
+        <div className="sectionLabel">Bonuses</div>
+        <h2>Start with everything you need to hit the ground running.</h2>
+        <p className="bonusIntro">Every LinkLedger Pro account includes three practical bonuses designed to get you set up fast, tracking the right programs, and migrating from spreadsheets without the headache.</p>
+        <div className="bonusGrid">
+          {bonuses.map(({ icon: Icon, name, description }) => (
+            <article className="bonusCard" key={name}>
+              <div className="bonusIcon"><Icon size={28} /></div>
+              <h3>{name}</h3>
+              <p>{description}</p>
+            </article>
+          ))}
+        </div>
+        <p className="bonusNote">All three bonuses are included with every Pro account at no extra cost.</p>
       </section>
 
       <section id="faq" className="faq sectionWrap">
