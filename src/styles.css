@@ -259,6 +259,7 @@ h3 { font-size: 1.2rem; margin-bottom: 10px; }
 .planTableTitle { font-size: 1.15rem; font-weight: 900; padding: 20px 24px; margin: 0; border-bottom: 1px solid rgba(16,32,51,.08); }
 .planTableHead, .planTableRow { display: grid; grid-template-columns: 1fr .55fr .55fr; padding: 14px 24px; align-items: center; gap: 12px; }
 .planTableHead { background: #102033; color: white; font-weight: 900; font-size: .88rem; }
+.planTableHead span:not(:first-child) { text-align: center; }
 .planTableRow { border-top: 1px solid rgba(16,32,51,.06); }
 .planTableRow:nth-child(even) { background: rgba(16,32,51,.015); }
 .planTableRow span:first-child { color: #304155; font-size: .93rem; }
